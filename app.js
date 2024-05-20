@@ -16,7 +16,21 @@ for (let i=0; i< dropList.length; i++){
         let optionTag = `
         <option value ="${currency_code}" ${selected}>${currency_code}</option>
         `;
-        dropList[i].addAdjecentHTML("beforeend, optionTag");
+        dropList[i].addAdjacentHTML("beforeend, optionTag");
     }
-
+    dropList[i].addEventListener("change", e =>{
+        //calling loadFlag with passing target element as an argument
+        loadFlag(e.target);
+    })
+}
+function loadFlag(element){
+    for(code in country_code){
+        // if currency code of country list is equal to the option value
+        if(code == element.value){
+            //selecting the img tag of default drop list
+            let imgTag = element.parentElement.querySelector("img");
+            //passing country code of a selected currency code in a image url
+            imgTag.src = `https://flagsapi.com/${country_code[code]}/flat/64.png`;
+        }
+    }
 }
