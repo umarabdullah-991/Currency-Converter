@@ -34,6 +34,21 @@ function loadFlag(element){
         }
     }
 }
+const exchangeIcon = document.querySelector(".drop-list .icon");
+    exchangeIcon.addEventListener("click", ()=>{
+        //temporary currency code of FROM drop list
+        let tempCode = fromCurrency.value;
+        //passing to currency code to FROM currency code
+
+        fromCurrency.value = toCurrency.value;
+        //passing temporary currency code to currency code
+        toCurrency.value = tempCode;
+
+        loadFlag(fromCurrency);
+        loadFlag(toCurrency);
+        getExchangeRate();
+    });
+
 function getExchangeRate(){
     const amount = document.querySelector(".amount input"),
     exchangeRateText = document.querySelector(".exchange-rate");
@@ -45,7 +60,7 @@ function getExchangeRate(){
     }
     exchangeRateText.innerText = "Getting exchange Rate..";
     //ExchangeRate API link
-    let url = ` https://v6.exchangerate-api.com/v6/9f7f74b93aad01db26db7cc3/latest/${fromCurrency.value} `;
+    let url = ` https://v6.exchangerate-api.com/v6/d70149d1331d767b716b62d0/latest/${fromCurrency.value} `;
     //fetching api response and returning it with parsing into js object and in another then method receiving that object
     fetch(url)
     .then(response => response.json())
@@ -54,6 +69,6 @@ function getExchangeRate(){
         let totalExchangeRate = (amountVal * exchangeRate).toFixed(2);
     
        
-        exchangeRateTxt.innerText = `${amountVal} ${fromCurrency.value} = ${totalExchangeRate} ${toCurrency.value}`; 
+        exchangeRateText.innerText = `${amountVal} ${fromCurrency.value} = ${totalExchangeRate} ${toCurrency.value}`;
     })
 }
