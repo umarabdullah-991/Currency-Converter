@@ -34,6 +34,14 @@ function loadFlag(element){
         }
     }
 }
+window.addEventListener("load", () =>{
+    getExchangeRate();
+});
+getButton.addEventListener("click", e =>{
+    //preventing from submitting
+    e.preventDefault();
+    getExchangeRate();
+});
 const exchangeIcon = document.querySelector(".drop-list .icon");
     exchangeIcon.addEventListener("click", ()=>{
         //temporary currency code of FROM drop list
