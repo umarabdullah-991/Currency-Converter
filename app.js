@@ -34,3 +34,26 @@ function loadFlag(element){
         }
     }
 }
+function getExchangeRate(){
+    const amount = document.querySelector(".amount input"),
+    exchangeRateText = document.querySelector(".exchange-rate");
+    let amountVal = amount.value;
+    //if user don't put any value or add 0 in input field then we will add 1 value by default in input field
+    if(amountVal == "" || amountVal == "0"){
+        amount.value = "1";
+        amountVal = 1 ;
+    }
+    exchangeRateText.innerText = "Getting exchange Rate..";
+    //ExchangeRate API link
+    let url = ` https://v6.exchangerate-api.com/v6/9f7f74b93aad01db26db7cc3/latest/${fromCurrency.value} `;
+    //fetching api response and returning it with parsing into js object and in another then method receiving that object
+    fetch(url)
+    .then(response => response.json())
+    .then(result => {
+        let exchangeRate = result.conversion_rates[toCurrency.value];
+        let totalExchangeRate = (amountVal * exchangeRate).toFixed(2);
+    
+       
+        exchangeRateTxt.innerText = `${amountVal} ${fromCurrency.value} = ${totalExchangeRate} ${toCurrency.value}`; 
+    })
+}
