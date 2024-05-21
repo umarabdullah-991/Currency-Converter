@@ -12,13 +12,19 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(43, 182, 90);
+    min-height: 100vh;
+    background-color: #0B6E4F;
 }
 .wrapper{
     width: 350px;
     padding: 2rem;
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
+}
+.wrapper header{
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
 }
 .wrapper form{
     margin: 3rem 0 2rem 0;
@@ -27,7 +33,6 @@ form :where(input, select, button){
     width: 100%;
     outline:none;
     border: none;
-    background-color: rgb(177, 77, 77);
 }
 form p{
     font-size: 1.5rem;
@@ -40,7 +45,7 @@ form input{
     border-radius: .5rem;
 }
 form input:focus{
-    border: 2px solid #369443;
+    border: 2px solid #6BBF59;
 }
 /* form img{
     width: 70px;
@@ -57,7 +62,7 @@ form .drop-list{
     height: 42px;
     align-items: center;
     justify-content: center;
-    border: 1px solid #999;
+    border: 1px solid #073B3A;
     padding: 0 1rem;
 }
 .select-box select::-webkit-scrollbar{
@@ -79,3 +84,23 @@ form .drop-list{
     font-size: 1.9rem;
     margin-top: 2.2rem;
 }
+.icon:hover{
+    color: #e2f029;
+}
+form .exchange-rate{
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+form button{
+    padding: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    background: #08A045;
+    color: #fff;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+form button:hover{
+    background: #0B6E4F;
+}
+
