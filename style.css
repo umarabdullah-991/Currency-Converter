@@ -84,8 +84,12 @@ form .drop-list{
     font-size: 1.9rem;
     margin-top: 2.2rem;
 }
+.icon{
+    color: #eff30b;
+
+}
 .icon:hover{
-    color: #e2f029;
+    color: #9af029;
 }
 form .exchange-rate{
     font-size: 1.5rem;
