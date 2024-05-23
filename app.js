@@ -16,7 +16,7 @@ for (let i = 0; i < dropList.length; i++){
         let optionTag = `
         <option value ="${currency_code}" ${selected}>${currency_code}</option>
         `;
-        dropList[i].insertAdjacentElement("beforeend", optionTag);
+        dropList[i].insertAdjacentHTML("beforeend", optionTag);
     }
     dropList[i].addEventListener("change", e =>{
         //calling loadFlag with passing target element as an argument

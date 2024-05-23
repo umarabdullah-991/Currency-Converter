@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currency Converter</title>
     <link
       rel="stylesheet"
@@ -11,43 +11,43 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon/icon.svg">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon/icon.svg" />
+  </head>
+  <body>
     <div class="wrapper">
-        <header>Currency Converter</header>
-        <form action="#">
-            <div>
-                <p>Enter Amount</p>
-                <input type="text" value="1">
+      <header>Currency Converter</header>
+      <form action="#">
+        <div class="amount">
+          <p>Enter Amount</p>
+          <input type="text" value="1" />
+        </div>
+        <div class="drop-list">
+          <div class="from">
+            <p>From</p>
+            <div class="select-box">
+              <img src="https://flagsapi.com/US/flat/64.png" alt="" />
+              <select>
+                <!-- getting all countries code in courntry.js file through dynamically -->
+              </select>
             </div>
-            <div class="drop-list">
-                <div class="from">
-                    <p>From</p>
-                    <div class="select-box">
-                        <img src="https://flagsapi.com/US/flat/64.png" alt="">
-                        <select>
-                                <!-- getting all countries code in courntry.js file through dynamically -->
-                        </select>
-                    </div>
-                </div>
-                <div class="icon"><i class="fa fa-exchange-alt"></i></div>
-                <div class="to">
-                    <p>To</p>
-                    <div class="select-box">
-                        <img src="https://flagsapi.com/PK/flat/64.png" alt="">
-                        <select>
-                            <!-- getting all countries code in courntry.js file through dynamically -->
-                        </select>
-                    </div>
-                </div>
+          </div>
+          <div class="icon"><i class="fa fa-exchange-alt"></i></div>
+          <div class="to">
+            <p>To</p>
+            <div class="select-box">
+              <img src="https://flagsapi.com/PK/flat/64.png" alt="" />
+              <select>
+                <!-- getting all countries code in courntry.js file through dynamically -->
+              </select>
             </div>
-            <div class="exchange-rate"></div>
-            <button>Check Exchange Rate</button>
-        </form>
+          </div>
+        </div>
+        <div class="exchange-rate"></div>
+        <button>Check Exchange Rate</button>
+      </form>
     </div>
     <script src="countries.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
