@@ -3,7 +3,7 @@
 The Currency Converter is a web application that allows users to convert currency values from one currency to another in real-time. The app fetches the latest exchange rates using the ExchangeRate API and displays the conversion results based on the input amount.
 
 ## Live Demo
-[Currency Converter Live Demo](#)
+[Currency Converter Live Demo](https://currency-converteer.netlify.app/)
 
 ## Table of Contents
 - [Features](#features)
@@ -65,6 +65,10 @@ Contains the logic for:
 - Fetching exchange rates.
 - Handling currency and flag updates.
 - Managing user interactions and form submissions.
+
+**Contributors:**
+- [Umar Abdullah](<https://github.com/umarabdullah-991>)
+- [Syed Aman Shah](<https://github.com/amanxsyed>)
 
 ### Additional Files
 - `countries.js`: Contains country and currency code mappings.
